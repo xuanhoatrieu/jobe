@@ -1,0 +1,15 @@
+services:
+  jobe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jobe
+    ports:
+      - "4000:80"
+    restart: unless-stopped
+    # Optional: resource limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 2G
+    #       cpus: '2'

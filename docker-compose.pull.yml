@@ -1,0 +1,10 @@
+## Dùng file này khi muốn PULL image từ GHCR thay vì build từ Dockerfile
+## Sao chép file này thành docker-compose.yml trên server mới
+
+services:
+  jobe:
+    image: ghcr.io/xuanhoatrieu/jobe-datascience:latest
+    container_name: jobe
+    ports:
+      - "4000:80"
+    restart: unless-stopped
